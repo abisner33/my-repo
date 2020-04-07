@@ -35,6 +35,15 @@ head(ca)
 ggplot(data = ca)
 ggplot(data = ca)+
   geom_point(aes(x=year, y=visitors))
+ggplot(data = ca) +
+    geom_point(aes(x = year, y = visitors, color = park_name))
+ggplot(data = ca) +
+    geom_point(aes(x = year, y = visitors, color = park_name)) +
+    labs(x = "Year",
+       y = "Visitation",
+       title = "California National Park Visitation") +
+    theme_bw() +
+    theme(legend.title=element_blank())
 ```
 
 ## Including Plots
