@@ -112,3 +112,20 @@ ggplot(data = acadia, aes(x = year, y = visitors)) +
  theme_grey()
 ```
 
+```{r}
+ggplot(data = visit_16, aes(x = state)) + 
+  geom_bar()
+ggplot(data = visit_16, aes(x = state, y = visitors, fill = park_name)) + 
+  geom_bar(stat = "identity")
+ggplot(data = visit_16, aes(x = visitors, y = state, fill = park_name)) + 
+  geom_bar(stat = "identity", position = "dodge")
+
+my_plot <- ggplot(data = mass) + 
+      geom_bar(aes(x = type, fill = park_name)) +
+  labs(x = "",
+       y = "")+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 7))
+
+ggsave("name_of_file.png", my_plot, width = 15, height = 10)
+```
+
