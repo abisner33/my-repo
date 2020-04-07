@@ -1,0 +1,48 @@
+---
+title: "Example R markdown document"
+output: html_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+height = 10
+width = 5
+area = height * width
+height
+width
+area
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.  This is what it looks like without 'echo = FALSE'
+
+
+```{r}
+plot(cars)
+```
+
+---
+
+#Organization for labs:
+1) create a "biometry" folder on your hard-drive (or usb stick, if not working on your computer).  
+2) Within that folder, create a 'lab1' subfolder.  
+3) Now copy this file to that new folder. 
+4) for each new lab, make a new subfolder in 'biometry' and store the lab-specific stuff there.
+5) for each new lab, create a markdown file to hold the lab contents.
+
+Alter markdown file:
+
+R markdown syntax cheatsheet is located at: http://shiny.rstudio.com/articles/rm-cheatsheet.html
+
+1) change this file.  Alter the formatting (see cheat sheet) and alter the content of the non-R text.
+2) change the R code in the code chunks.  An easy thing to do would be to change the settings for 'width' or 'height' above and see the effect on area.
+3) make sure that you can knit the entire documentq
+
