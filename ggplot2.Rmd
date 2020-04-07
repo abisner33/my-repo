@@ -50,8 +50,23 @@ ggplot(data = ca) +
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+head(se)
+ggplot(data = se)
+ggplot(data = se)+
+  geom_point(aes(x=year, y=visitors))
+ggplot(data = se) +
+    geom_point(aes(x = year, y = visitors, color = state))
+ggplot(data = se) +
+    geom_point(aes(x = year, y = visitors, color = state))
+labs(x = "Year",
+       y = "Visitation",
+       title = "National Park Visitation by State")+
+  theme_light()+
+  theme(legend.title = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust=1,size=14))
+        
+        
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
