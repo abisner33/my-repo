@@ -51,6 +51,10 @@ ggplot(data = ca) +
 You can also embed plots, for example:
 
 ```{r}
+```
+
+
+```{r}
 head(se)
 ggplot(data = se)
 ggplot(data = se)+
@@ -65,8 +69,13 @@ labs(x = "Year",
   theme_light()+
   theme(legend.title = element_blank(),
         axis.text.x = element_text(angle = 45, hjust=1,size=14))
-        
-        
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+ggplot(data = se)+
+  geom_point(aes (x=year, y= visitors, color= park_name))+
+  facet_wrap(~state, scales = "free")
+```
+
+
